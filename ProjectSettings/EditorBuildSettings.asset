@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Gamework Framework/Testing/Movement/MovementTest.unity
+    guid: 8c6893d9ed1f8ea44852b4e78884ff0a
+  - enabled: 1
+    path: Assets/Gamework Framework/Testing/Sorting/SortingTest.unity
+    guid: f0edfff23ec93094baa8a93d2a2616bb
+  - enabled: 1
+    path: Assets/Gamework Framework/Testing/Search/SearchTest.unity
+    guid: 302323f7bd2323547bff6c8d236470da
+  - enabled: 1
+    path: Assets/Gamework Framework/Testing/Editor/EditorTesting.unity
+    guid: c67d0e7fe675b8a42bb26d1ca4429e38
   m_configObjects: {}
