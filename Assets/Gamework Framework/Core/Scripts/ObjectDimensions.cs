@@ -11,6 +11,10 @@ namespace GameworkFramework.Core
     public class ObjectDimensions : MonoBehaviour
     {
         /// <summary>
+        /// Center of the object
+        /// </summary>
+        public Vector3 center = Vector3.zero;
+        /// <summary>
         /// Position of the object
         /// </summary>
         public Vector3 position = Vector3.one;
@@ -30,6 +34,21 @@ namespace GameworkFramework.Core
             transform.position = position;
             transform.localScale = scale;
             transform.rotation = Quaternion.Euler(rotation);
+        }
+        private void OnDrawGizmos()
+        {
+            // Store the original Gizmos Matrix
+            Matrix4x4 original = Gizmos.matrix;
+            
+            // Make the gizmos use the current objects transform (matrix)
+            Gizmos.matrix = transform.localToWorldMatrix;
+            
+            // Draw a blue cube 
+            Gizmos.color = new Color(0, 0, 0.25f);
+            Gizmos.DrawCube(center, scale);
+            
+            // Reset the Gizmos matrix to the original one
+            Gizmos.matrix = original;
         }
     }
 }
